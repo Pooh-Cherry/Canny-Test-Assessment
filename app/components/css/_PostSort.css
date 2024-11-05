@@ -1,0 +1,104 @@
+.postSort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.text {
+  font-size: 17px;
+  line-height: 22px;
+  cursor: default;
+}
+
+.selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 4px;
+  margin: 0 7px;
+  border-bottom: 1px dotted #aaa;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+.selector:hover {
+  border-bottom: 1px dotted #333;
+}
+
+.selectedName {
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.icon-chevron-down {
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: 12px;
+  margin: 0 0 0 5px;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  top: 26px;
+  z-index: 1;
+  left: -20px;
+  cursor: default;
+  box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.2);
+  animation: slide-up 0.2s ease;
+  border-radius: 5px;
+}
+
+.sortHeader {
+  color: #999;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 17px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+}
+
+.sorts {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  border-right: 1px solid #efefef;
+}
+
+.option {
+  position: relative;
+  padding: 5px 25px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.option:hover {
+  background: #efefef;
+}
+
+.dot {
+  display: none;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  -webkit-filter: blur(0);
+  filter: none;
+  left: 10px;
+  border-radius: 3px;
+  background-color: #525df9;
+}
+
+.option.selected .dot {
+  display: flex;
+}
